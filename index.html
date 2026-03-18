@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanic EDA Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<main class="dashboard">
+    <header class="hero">
+        <p class="eyebrow">Passenger Intelligence Report</p>
+        <h1>Titanic Data Analysis Dashboard</h1>
+        <p class="subtext">Interactive visual insights on survival outcomes, gender trends, and class distribution.</p>
+        <button onclick="loadData()">Generate Professional Insights</button>
+    </header>
+
+    <section id="summary" class="summary-grid"></section>
+
+    <section class="container">
+        <article class="chart-card">
+            <h2>Survival Outcome</h2>
+            <canvas id="survivalChart"></canvas>
+        </article>
+        <article class="chart-card">
+            <h2>Survivors by Gender</h2>
+            <canvas id="genderChart"></canvas>
+        </article>
+        <article class="chart-card">
+            <h2>Passenger Class Split</h2>
+            <canvas id="classChart"></canvas>
+        </article>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

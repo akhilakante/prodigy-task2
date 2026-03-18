@@ -1,0 +1,145 @@
+:root {
+    --bg-start: #f4f7ff;
+    --bg-end: #edf2ff;
+    --card: #ffffff;
+    --text-main: #102a43;
+    --text-muted: #486581;
+    --accent: #2f6df6;
+    --accent-dark: #1d4ed8;
+    --border: #d9e2ec;
+    --success: #0f9d58;
+    --danger: #d93025;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(120deg, var(--bg-start), var(--bg-end));
+    color: var(--text-main);
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+}
+
+.hero {
+    text-align: center;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 30px 20px;
+    margin-bottom: 24px;
+}
+
+.eyebrow {
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+h1 {
+    margin: 10px 0 8px;
+    font-size: 34px;
+    line-height: 1.2;
+}
+
+.subtext {
+    margin: 0 0 22px;
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 22px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.summary-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    text-align: left;
+}
+
+.summary-card h3 {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.summary-card p {
+    margin: 8px 0 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.summary-card .meta {
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    gap: 18px;
+}
+
+.chart-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.chart-card h2 {
+    margin: 6px 8px 10px;
+    font-size: 16px;
+    color: var(--text-main);
+}
+
+canvas {
+    width: 100% !important;
+    height: 280px !important;
+}
+
+@media (max-width: 980px) {
+    .summary-grid,
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
